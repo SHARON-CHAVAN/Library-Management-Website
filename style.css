@@ -1,0 +1,120 @@
+body {
+  background-image: url('library_pic.jpg');
+  background-size: cover; /* scale the image to cover the entire body */
+  background-repeat: no-repeat; /* prevent the image from repeating */
+  background-attachment: fixed; /* fix the position of the image */
+ <h1>Welcome to the Library</h1>
+  <h1> Dr. D.Y.Patil ACS College Pimpri </h1>
+}
+
+<div class="background-image">
+  
+  <h1> Dr. D.Y.Patil ACS College Pimpri </h1>
+</div>
+
+.background-image {
+  background-image: url(library_pic.jpg');
+  background-size: cover;
+  position: relative; /* set the parent element to relative position */
+}
+
+.background-image h1 {
+  position: absolute; /* position the text absolutely within the parent element */
+  top: 50%; /* adjust the top and left properties to center the text */
+  left: 50%;
+  transform: translate(-50%, -50%); /* use transform to center the text */
+  color: white; /* add color to the text to make it visible over the image */
+}
+
+h1 {
+  text-align: center;
+   margin-top: 100px;
+  color: white;
+}
+
+.image-container {
+  width: 200px;
+  height: 200px;
+
+}
+
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.image:hover .overlay {
+  opacity: 1;
+}
+
+
+
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  background-image: url("blur_pic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h2 {
+  color: #4d4d4d;
+}
+
+.menu {
+  margin-bottom: 20px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.menu li {
+  float: left;
+}
+
+.menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: #4CAF50;
+}
+
+.menu .active {
+  background-color: #4CAF50;
+}

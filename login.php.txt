@@ -1,0 +1,40 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    
+    // Check if username and password are valid
+    // Replace the following code with your own validation logic
+    if ($username === 'myusername' && $password === 'mypassword') {
+        // Redirect to the dashboard page on successful login
+        header('Location: dashboard.php');
+        exit();
+    } else {
+        // Display error message on unsuccessful login
+        $error = 'Invalid username or password';
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="login_page_css.css">
+</head>
+<body>
+	<div class="login">
+		<h2>Login Here</h2>
+		<form action="" method="POST">
+			<label>Username:</label>
+			<input type="text" name="username" placeholder="Enter Username"><br><br>
+			<label>Password:</label>
+			<input type="password" name="password" placeholder="Enter Password"><br><br>
+			<input type="submit" value="Login">
+		</form>
+        <?php if (isset($error)) { ?>
+        <p><?php echo $error; ?></p>
+        <?php } ?>
+	</div>
+</body>
+</html>
